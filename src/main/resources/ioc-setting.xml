@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+       <bean id="myBean" class="org.springCore.MyBean"/>
+    <bean id="MyBean2" class="org.springCore.MyBean2" c:_0-ref="myBean">
+    </bean>
+
+    <bean id="person" class="org.springCore.Person"
+          p:age="18"
+          p:firstname="Shakhzod"
+    >
+        <property name="nicknames">
+            <list>
+                <value>Placeholder</value>
+                <value>Pencil</value>
+            </list>
+        </property>
+    </bean>
+
+
+
+    <bean id="Person" class="org.springCore.Person" c:_0="Ali" c:_1="22"/>
+</beans>
