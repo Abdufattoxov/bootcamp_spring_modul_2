@@ -1,7 +1,11 @@
 package org.springCore;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ioc-config.xml");
+        Performance bean = context.getBean(Performance.class);
+        bean.perform();
     }
 }
